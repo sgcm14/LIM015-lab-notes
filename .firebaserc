@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "lab-notes-fdc81": {
+      "hosting": {
+        "lab-notes": [
+          "lab-notes-fdc81"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "lab-notes-fdc81"
+  }
+}
