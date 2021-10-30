@@ -1,0 +1,21 @@
+figure{
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+#login-logoImg{
+    width: 100%;
+}
+form{
+    background-color: #F5F5F0;
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+    text-align: center;
+}
+button{
+    display: block;
+    width: 100%;
+}
