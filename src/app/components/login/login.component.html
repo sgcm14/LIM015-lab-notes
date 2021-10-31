@@ -6,13 +6,13 @@
         <form>
           <h2>Introduce tus datos para iniciar sesión</h2>
           <div class="form-group">
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Correo Electrónico">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Correo Electrónico" name="email" [(ngModel)]="usuario.email">
           </div>
           <div class="form-group">
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña" name="password" [(ngModel)]="usuario.password">
           </div>
-          <button type="submit" class="btn btn-warning">Iniciar Sesión</button>
-          <button type="submit" class="btn btn-outline-primary">Inicia Sesión con Google</button>
+          <button type="submit" class="btn btn-warning" routerLink="/home">Iniciar Sesión</button>
+          <button type="submit" class="btn btn-outline-primary" (click)="loginWithGoogle()">Inicia Sesión con Google</button>
           <label>o crear cuenta nueva</label>
           <button type="submit" class="btn btn-dark">Crear Cuenta</button>
         </form>
