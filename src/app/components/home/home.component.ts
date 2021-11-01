@@ -6,13 +6,14 @@ import { AuthService } from '../../services/auth.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
 export class HomeComponent implements OnInit {
 
   constructor(private authService: AuthService ) { }
 
   ngOnInit(): void { 
     this.authService.checkLogin(); // si usuario no esta autenticado redirige a LOGIN
-   }
+  }
 
   logout(){
     this.authService.logout()

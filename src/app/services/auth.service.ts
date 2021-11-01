@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import{ AngularFireAuth } from '@angular/fire/compat/auth';
-import firebase from  'firebase/compat/app';
 import {Router} from '@angular/router';
+
+import firebase from  'firebase/compat/app';
+// import { FirestoreService } from './firestore.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,25 +11,45 @@ import {Router} from '@angular/router';
 
 export class AuthService {
 
-  constructor(private authService: AngularFireAuth,
-              private router:Router) { }
+  constructor(private auth: AngularFireAuth,
+              private router:Router,
+              // private firestoreService:FirestoreService
+              ) { }
 
+async registerWithEmail(email: string, password: string){
+    try{
+      return await this.auth.createUserWithEmailAndPassword(email, password)
+    } catch (err){
+      console.log("error register email", err);
+      return null;
+    }
+  }
+
+  async loginWithEmail(email: string, password: string){
+    try{
+      return await this.auth.signInWithEmailAndPassword(email, password);
+    } catch (err){
+      console.log("error login email", err);
+      return null;
+    }
+  }
+              
   async loginWithGoogle(){
     try{
-      return await this.authService.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+      return await this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
     } catch (err){
-      console.log("error ", err);
+      console.log("error login google ", err);
       return null;
     }
   }
 
   async logout(){
     try{
-      return await this.authService.signOut().then(() => {
-        this.router.navigate(['login']);
+      return await this.auth.signOut().then(() => {
+        // this.router.navigate(['login']);
       });
     } catch (err){
-      console.log("error ", err);
+      console.log("error logout ", err);
       return null;
     }
   }
@@ -35,7 +57,7 @@ export class AuthService {
   // si usuario esta autenticado redirige a HOME
   async isLogueado(){
     try{
-      return await this.authService.onAuthStateChanged((user)=> {
+      return await this.auth.onAuthStateChanged((user)=> {
         if(user){
           console.log(user);
           this.router.navigate(['home']);
@@ -47,10 +69,10 @@ export class AuthService {
     }
   }
   
-// si usuario no esta autenticado redirige a LOGIN
+  // si usuario no esta autenticado redirige a LOGIN
   async checkLogin(){
     try{
-      return await this.authService.onAuthStateChanged((user)=> {
+      return await this.auth.onAuthStateChanged((user)=> {
         if(!user){
           console.log(user);
           this.router.navigate(['login']);
@@ -61,5 +83,29 @@ export class AuthService {
       return null;
     }
   }
+
+  // async dataUser(){
+  //   try{
+  //     return await this.auth.onAuthStateChanged((user)=> {
+  //       if(user){
+  //         console.log(user);
+  //         const idUser = user.uid;
+          // recorre coleccion USER de firestore donde idUser(usuario logueado) = uid(usuario en USER)
+          // this.firestoreService.getUsers().where('uid', '==', idUser).get()
+          //   .then((data: any) => {
+          //     data.forEach((hijo: any) => {
+          //       // console.log(hijo.data());
+          //       const datosUser = hijo.data();
+          //       console.log(datosUser.fullName);
+          //       // document.querySelector('#photoProfile').innerHTML = `<img src= '${datosUser.photo}' />`;
+          //     });
+          //   });
+  //       }
+  //     });
+  //   } catch(err){
+  //     console.log("error ", err);
+  //     return null;
+  //   }
+  // }
 
 }

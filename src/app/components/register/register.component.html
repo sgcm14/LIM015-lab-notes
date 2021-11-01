@@ -18,7 +18,7 @@
           <div class="form-group">
             <input type="password" class="form-control"  placeholder="Contraseña" name="password" [(ngModel)]="user.password">
           </div>
-          <button type="submit" class="btn btn-dark mt-4" routerLink="/login">Registrarme</button>
+          <button type="submit" class="btn btn-dark mt-4" routerLink="/login" (click)="registerWithEmail()">Registrarme</button>
         </form>
     </main>
 </section>

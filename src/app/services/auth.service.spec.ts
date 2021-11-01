@@ -1,10 +1,12 @@
 import { TestBed } from '@angular/core/testing';
-import { AuthService } from './auth.service';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
-import { environment } from 'src/environments/environment';
 import { RouterTestingModule } from '@angular/router/testing';
 // import { AngularFireAuth } from '@angular/fire/compat/auth';
+
+import { AuthService } from './auth.service';
+import { environment } from 'src/environments/environment';
+
 
 describe('AuthService', () => {
   let service: AuthService;
