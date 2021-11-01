@@ -1,21 +1,19 @@
 import { TestBed } from '@angular/core/testing';
-import { AuthService } from './auth.service';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from 'src/environments/environment';
-import { RouterTestingModule } from '@angular/router/testing';
-// import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { FirestoreService } from './firestore.service';
 
-describe('AuthService', () => {
-  let service: AuthService;
+describe('FirestoreService', () => {
+  let service: FirestoreService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
-        AngularFireModule.initializeApp(environment.firebase), AngularFirestoreModule, RouterTestingModule
+        AngularFireModule.initializeApp(environment.firebase), AngularFirestoreModule
       ]
     });
-    service = TestBed.inject(AuthService);
+    service = TestBed.inject(FirestoreService);
   });
 
   it('should be created', () => {

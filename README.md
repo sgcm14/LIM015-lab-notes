@@ -218,6 +218,15 @@ Yo como usuaria de lab-notes quiero editar notas para poder modificar lo que esc
 Yo como usuaria de lab-notes quiero borrar una nota para no volver a verla.  
 ~~~  
 
+* Prototipo de LOGIN
+![](https://raw.githubusercontent.com/sgcm14/LIM015-lab-notes/main/src/assets/images/PA-login.png)
+
+* Prototipo de REGISTRAR
+![](https://raw.githubusercontent.com/sgcm14/LIM015-lab-notes/main/src/assets/images/PA-register.png)
+
+* Prototipo de HOME
+![](https://raw.githubusercontent.com/sgcm14/LIM015-lab-notes/main/src/assets/images/PA-home.png)
+
 ##### Criterios de aceptación
 
 Lo que debe ocurrir para que se satisfagan las necesidades del usuario
@@ -286,4 +295,9 @@ pasarte a esta sección.
 * [Usando Service Workers - MDN](https://developer.mozilla.org/es/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 * [What is a Single Page Application](https://medium.com/@NeotericEU/single-page-application-vs-multiple-page-application-2591588efe58)
 
-...
+
+**Realizado por :** 
+
+Sammy Gigi Cantoral Montejo (sgcm14)
+
+<img src ="https://raw.githubusercontent.com/sgcm14/sgcm14/main/sammy.jpg" width="200">
