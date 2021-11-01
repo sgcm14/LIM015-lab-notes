@@ -7,7 +7,9 @@ import { FirestoreService } from '../../services/firestore.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent implements OnInit {
+
   user = {
     email: '',
     password: ''
@@ -18,6 +20,12 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {  
     this.authService.isLogueado(); // si usuario esta autenticado redirige a HOME
+  }
+
+  loginWithEmail(){
+    console.log(this.user);
+    const {email, password} = this.user;
+    this.authService.loginWithEmail(email, password).then().catch()
   }
 
   loginWithGoogle(){
