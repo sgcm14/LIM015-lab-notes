@@ -8,7 +8,7 @@ import { FirestoreService } from '../../services/firestore.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  usuario = {
+  user = {
     email: '',
     password: ''
   }
