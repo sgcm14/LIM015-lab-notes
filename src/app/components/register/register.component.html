@@ -1,11 +1,11 @@
 <section>
     <figure>
-        <img id="login-logoImg" src="../../../assets/images/logo-login.png" alt="logo"/>
+      <img id="login-logoImg" src="../../../assets/images/logo-login.png" alt="logo"/>
     </figure>
     <main>
-        <form>
+      <form>
           <h2>Regístrate</h2>
-          <p>¿Es rápido y fácil!</p>
+          <p>¡Es rápido y fácil!</p>
           <div class="form-group">
             <input type="text" class="form-control"  aria-describedby="basic-addon1" placeholder="Nombres" name="name" [(ngModel)]="user.name">
           </div>
@@ -18,7 +18,7 @@
           <div class="form-group">
             <input type="password" class="form-control"  placeholder="Contraseña" name="password" [(ngModel)]="user.password">
           </div>
-          <button type="submit" class="btn btn-dark mt-4" routerLink="/login" (click)="registerWithEmail()">Registrarme</button>
-        </form>
+          <button type="button" class="btn btn-dark mt-4" (click)="registerWithEmail()" [disabled]="loading" >Registrarme</button>
+      </form>
     </main>
 </section>

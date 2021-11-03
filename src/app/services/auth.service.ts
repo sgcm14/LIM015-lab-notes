@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 import{ AngularFireAuth } from '@angular/fire/compat/auth';
 import {Router} from '@angular/router';
-
+import { getAuth } from "firebase/auth";
 import firebase from  'firebase/compat/app';
+import { Subject } from 'rxjs';
+import { User } from '../model/user';
 // import { FirestoreService } from './firestore.service';
 
 @Injectable({
@@ -11,10 +13,12 @@ import firebase from  'firebase/compat/app';
 
 export class AuthService {
 
+  isAuth = new Subject<boolean>();
+
   constructor(private auth: AngularFireAuth,
-              private router:Router,
+              private router:Router 
               // private firestoreService:FirestoreService
-              ) { }
+              ) {}
 
 async registerWithEmail(email: string, password: string){
     try{
@@ -46,7 +50,6 @@ async registerWithEmail(email: string, password: string){
   async logout(){
     try{
       return await this.auth.signOut().then(() => {
-        // this.router.navigate(['login']);
       });
     } catch (err){
       console.log("error logout ", err);
@@ -59,7 +62,6 @@ async registerWithEmail(email: string, password: string){
     try{
       return await this.auth.onAuthStateChanged((user)=> {
         if(user){
-          console.log(user);
           this.router.navigate(['home']);
         }
       });
@@ -72,16 +74,42 @@ async registerWithEmail(email: string, password: string){
   // si usuario no esta autenticado redirige a LOGIN
   async checkLogin(){
     try{
-      return await this.auth.onAuthStateChanged((user)=> {
+      return await this.auth.onAuthStateChanged((user:any)=> {
+        console.log('user1---->',user.displayName);
         if(!user){
-          console.log(user);
-          this.router.navigate(['login']);
+          //this.router.navigate(['login']);
         }
       });
     } catch(err){
       console.log("error ", err);
       return null;
     }
+  }
+
+  async dataUser(): Promise<User> {
+    return await new Promise((resolve, reject) => {
+      let dataUser: User = new User();
+      this.auth.onAuthStateChanged((userFire: any)=> {
+        
+        if(userFire){          
+            dataUser.uid = userFire.uid;
+            dataUser.displayName = (userFire.displayName !== null) ? userFire.displayName : 'x';
+            dataUser.email = (userFire.email !== null) ? userFire.email : 'x';
+            dataUser.photoURL = (userFire.photoURL !== null) ? userFire.photoURL : 'x'; 
+            resolve(dataUser);         
+        }
+        
+      });
+    })
+    
+    
+  
+
+  }
+
+  test() {
+    console.log('testtttttttttttt');
+    
   }
 
   // async dataUser(){
