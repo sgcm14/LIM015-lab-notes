@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import{ AngularFireAuth } from '@angular/fire/compat/auth';
 import {Router} from '@angular/router';
-import { getAuth } from "firebase/auth";
+// import { getAuth } from "firebase/auth";
 import firebase from  'firebase/compat/app';
 import { Subject } from 'rxjs';
 import { User } from '../model/user';
@@ -102,38 +102,11 @@ async registerWithEmail(email: string, password: string){
       });
     })
     
-    
-  
-
   }
 
   test() {
     console.log('testtttttttttttt');
     
   }
-
-  // async dataUser(){
-  //   try{
-  //     return await this.auth.onAuthStateChanged((user)=> {
-  //       if(user){
-  //         console.log(user);
-  //         const idUser = user.uid;
-          // recorre coleccion USER de firestore donde idUser(usuario logueado) = uid(usuario en USER)
-          // this.firestoreService.getUsers().where('uid', '==', idUser).get()
-          //   .then((data: any) => {
-          //     data.forEach((hijo: any) => {
-          //       // console.log(hijo.data());
-          //       const datosUser = hijo.data();
-          //       console.log(datosUser.fullName);
-          //       // document.querySelector('#photoProfile').innerHTML = `<img src= '${datosUser.photo}' />`;
-          //     });
-          //   });
-  //       }
-  //     });
-  //   } catch(err){
-  //     console.log("error ", err);
-  //     return null;
-  //   }
-  // }
 
 }

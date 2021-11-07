@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
-import { FirestoreService } from 'src/app/services/firestore.service';
+// import { FirestoreService } from 'src/app/services/firestore.service';
 
 @Component({
   selector: 'app-register',
@@ -13,14 +13,14 @@ export class RegisterComponent implements OnInit {
   loading: boolean = false;
 
   user = {
-    name: 'demo',
-    lastName: 'test',
-    email: 'demo@gmail.com',
-    password: '123456'
+    name: '',
+    lastName: '',
+    email: '',
+    password: ''
   }
 
   constructor(private authService: AuthService,
-              private firestoreService: FirestoreService,
+              // private firestoreService: FirestoreService,
               private router:Router) { }
 
   ngOnInit(): void {
