@@ -166,9 +166,10 @@ Yo como usuaria de lab-notes quiero borrar una nota para no volver a verla.
 
 ### 4.4 Implementación de la Interfaz de Usuario (Angular)
 
-A continuacion de muestra el funcionamiento de la pagina:
+A continuacion se muestra el funcionamiento de la pagina:
 
 Ingreso a la web: El usuario puede ingresar con una cuenta de correo, previamente creada. Dando click en **Iniciar Sesión**
+
 ![](https://raw.githubusercontent.com/sgcm14/LIM015-lab-notes/main/src/assets/images/pantalla1.png)
 >Pantalla de LOGIN
 
