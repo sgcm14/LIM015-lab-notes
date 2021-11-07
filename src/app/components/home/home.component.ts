@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { FirestoreService } from '../../services/firestore.service';
-import { getAuth } from "firebase/auth";
+// import { getAuth } from "firebase/auth";
 import { User } from 'src/app/model/user';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
@@ -39,14 +39,7 @@ export class HomeComponent implements OnInit {
       
         this.dataUser = data;
         this.getNotes();
-        
-        
-
     });
-
-    
-    
-
   }
 
   logout(){
