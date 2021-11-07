@@ -11,7 +11,7 @@
 * [2. Resumen del Proyecto](#2-resumen-del-proyecto)
 * [3. Objetivos de Aprendizaje](#3-objetivos-de-aprendizaje)
 * [4. Criterios que cumple el proyecto](#4-criterios-que-cumple-el-proyecto)
-* [5. Consideraciones técnicas](#5-consideracione-técnicas)
+* [5. Consideraciones técnicas](#5-consideraciones-técnicas)
 
 ***
 
@@ -166,38 +166,41 @@ Yo como usuaria de lab-notes quiero borrar una nota para no volver a verla.
 
 ### 4.4 Implementación de la Interfaz de Usuario (Angular)
 
+A continuacion de muestra el funcionamiento de la pagina:
+
+Ingreso a la web: El usuario puede ingresar con una cuenta de correo, previamente creada. Dando click en **Iniciar Sesión**
 ![](https://raw.githubusercontent.com/sgcm14/LIM015-lab-notes/main/src/assets/images/pantalla1.png)
->Prototipo de pantalla de LOGIN
+>Pantalla de LOGIN
 
-
+Al dar click en Crear cuenta, te redirige a una ventana con datos que debes llenar correctamente y dar click en **Registrarme**
 ![](https://raw.githubusercontent.com/sgcm14/LIM015-lab-notes/main/src/assets/images/pantalla2.png)
->Prototipo de pantalla de REGISTRAR
+>Pantalla de REGISTRAR
 
-
+Ingreso a la web: El usuario puede ingresar con Google al darle click en **Acceder con Google**
 ![](https://raw.githubusercontent.com/sgcm14/LIM015-lab-notes/main/src/assets/images/pantalla3.png)
+>Pantalla de LOGIN
+
+El usuario cuando le da click en **Add Note**
+![](https://raw.githubusercontent.com/sgcm14/LIM015-lab-notes/main/src/assets/images/pantalla4.png)
+>Pantalla de HOME
+
+Se le crea una nota, si el desea modificar o escribir datos solo basta con dar click en la seción del mensaje
+![](https://raw.githubusercontent.com/sgcm14/LIM015-lab-notes/main/src/assets/images/pantalla5.png)
 >Prototipo de pantalla de HOME
 
-
-![](https://raw.githubusercontent.com/sgcm14/LIM015-lab-notes/main/src/assets/images/pantalla4.png)
->Prototipo de pantalla de LOGIN
-
-
-![](https://raw.githubusercontent.com/sgcm14/LIM015-lab-notes/main/src/assets/images/pantalla5.png)
->Prototipo de pantalla de REGISTRAR
-
-
+Cuando ya escribió la nota que desea le da click en **Update**, esto muestra un mensaje "Nota actualizada"
 ![](https://raw.githubusercontent.com/sgcm14/LIM015-lab-notes/main/src/assets/images/pantalla6.png)
 >Prototipo de pantalla de HOME
 
-
+Al agregar una nueva nota esta se situa antes de la nota anterior.
 ![](https://raw.githubusercontent.com/sgcm14/LIM015-lab-notes/main/src/assets/images/pantalla7.png)
->Prototipo de pantalla de LOGIN
+>Prototipo de pantalla de HOME
 
-
+Si le da click en **X** esta elimina la nota clickeada
 ![](https://raw.githubusercontent.com/sgcm14/LIM015-lab-notes/main/src/assets/images/pantalla8.png)
->Prototipo de pantalla de REGISTRAR
+>Prototipo de pantalla de HOME
 
-
+Si el usuario desea cerrar sesión, solo debe dar click debajo de su foto en **Log out**
 ![](https://raw.githubusercontent.com/sgcm14/LIM015-lab-notes/main/src/assets/images/pantalla9.png)
 >Prototipo de pantalla de HOME
 
