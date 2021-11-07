@@ -174,10 +174,12 @@ Ingreso a la web: El usuario puede ingresar con una cuenta de correo, previament
 >Pantalla de LOGIN
 
 Al dar click en Crear cuenta, te redirige a una ventana con datos que debes llenar correctamente y dar click en **Registrarme**
+
 ![](https://raw.githubusercontent.com/sgcm14/LIM015-lab-notes/main/src/assets/images/pantalla2.png)
 >Pantalla de REGISTRAR
 
 Ingreso a la web: El usuario puede ingresar con Google al darle click en **Acceder con Google**
+
 ![](https://raw.githubusercontent.com/sgcm14/LIM015-lab-notes/main/src/assets/images/pantalla3.png)
 >Pantalla de LOGIN
 
