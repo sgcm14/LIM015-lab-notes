@@ -96,7 +96,7 @@ export class AuthService {
 
         if (userFire) {
           dataUser.uid = userFire.uid;
-          dataUser.displayName = (userFire.displayName !== null) ? userFire.displayName : 'x';
+          dataUser.displayName = (userFire.displayName !== null) ? userFire.displayName : 'visitante';
           dataUser.email = (userFire.email !== null) ? userFire.email : 'x';
           dataUser.photoURL = (userFire.photoURL !== null) ? userFire.photoURL : 'x';
           resolve(dataUser);
