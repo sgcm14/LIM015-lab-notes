@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/services/auth.service';
-// import { FirestoreService } from '../../services/firestore.service';
 // import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
+
+import { AuthService } from 'src/app/services/auth.service';
+// import { FirestoreService } from '../../services/firestore.service';
+
 
 @Component({
   selector: 'app-login',
@@ -18,22 +20,23 @@ export class LoginComponent implements OnInit {
   }
 
   constructor(private authService: AuthService,
-              // private firestoreService: FirestoreService,
-              // private auth: AngularFireAuth,
-              private router:Router ) { }
+    // private firestoreService: FirestoreService,
+    // private auth: AngularFireAuth,
+    private router: Router
+  ) { }
 
-  ngOnInit(): void {      
+  ngOnInit(): void {
   }
 
-  loginWithEmail(){
-    const {email, password} = this.user;
+  loginWithEmail() {
+    const { email, password } = this.user;
     this.authService.loginWithEmail(email, password).then(e => {
       this.router.navigate(['home']);
     }).catch()
   }
 
-  loginWithGoogle(){
-    this.authService.loginWithGoogle().then((userCredential:any) => {
+  loginWithGoogle() {
+    this.authService.loginWithGoogle().then((userCredential: any) => {
       this.router.navigate(['home']);
     }).catch((error) => {
       const errorCode = error.code;
