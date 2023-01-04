@@ -78,7 +78,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     this.authService.dataUser().then((data: User) => {
       this.dataUser = data;
-      // console.log(data)
+      console.log("this.dataUser", this.dataUser)
       this.getNotes();
     });
   }
