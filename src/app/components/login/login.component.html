@@ -13,9 +13,11 @@
         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña" name="password"
           [(ngModel)]="user.password">
       </div>
-      <button type="submit" class="btn btn-warning mt-2" (click)="loginWithEmail()">Iniciar Sesión</button>
+      <button type="submit" class="btn btn-outline-warning mt-2" (click)="loginWithEmail()">Iniciar Sesión</button>
       <button type="submit" class="btn btn-outline-primary mt-2" (click)="loginWithGoogle()">Inicia Sesión con
         Google</button>
+      <button type="submit" class="btn btn-outline-secondary mt-2" routerLink="/registerPhone">Inicia Sesión con
+        SMS</button>
       <label class="mt-4">o crear cuenta nueva</label>
       <button type="submit" class="btn btn-dark mt-2" routerLink="/register">Crear Cuenta</button>
     </form>
