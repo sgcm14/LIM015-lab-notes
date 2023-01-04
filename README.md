@@ -189,23 +189,49 @@ El usuario cuando le da click en **Add Note**
 
 Se le crea una nota, si el desea modificar o escribir datos solo basta con dar click en la seción del mensaje
 ![](https://raw.githubusercontent.com/sgcm14/LIM015-lab-notes/main/src/assets/images/pantalla5.png)
->Prototipo de pantalla de HOME
+>Pantalla de HOME
 
 Cuando ya escribió la nota que desea le da click en **Update**, esto muestra un mensaje "Nota actualizada"
 ![](https://raw.githubusercontent.com/sgcm14/LIM015-lab-notes/main/src/assets/images/pantalla6.png)
->Prototipo de pantalla de HOME
+>Pantalla de HOME
 
 Al agregar una nueva nota esta se situa antes de la nota anterior.
 ![](https://raw.githubusercontent.com/sgcm14/LIM015-lab-notes/main/src/assets/images/pantalla7.png)
->Prototipo de pantalla de HOME
+>Pantalla de HOME
 
 Si le da click en **X** esta elimina la nota clickeada
 ![](https://raw.githubusercontent.com/sgcm14/LIM015-lab-notes/main/src/assets/images/pantalla8.png)
->Prototipo de pantalla de HOME
+>Pantalla de HOME
+
+
+Si agregas muchas notas, por ventana activa te mostrará 6 notas, las demás se iran colocando en otra vista y aumentará la paginación en la parte inferior
+![](https://raw.githubusercontent.com/sgcm14/LIM015-lab-notes/main/src/assets/images/pantalla10.png)
+>Pantalla de HOME (*paginación de 6 notas*)
+
+En esta vista agregué 7 notas es por esto q me sale *1 de 2* 
+![](https://raw.githubusercontent.com/sgcm14/LIM015-lab-notes/main/src/assets/images/pantalla11.png)
+>Pantalla de HOME (*paginación de 7 notas*)
+
+Se visualiza la 7° nota agregada en la página *2*
+![](https://raw.githubusercontent.com/sgcm14/LIM015-lab-notes/main/src/assets/images/pantalla12.png)
+>Pantalla de HOME (*7° nota*)
+
+Al darle click en **Copy**, se copia el contenido de la notita clickeada
+![](https://raw.githubusercontent.com/sgcm14/LIM015-lab-notes/main/src/assets/images/pantalla13.png)
+>Pantalla de HOME
+
+Luego te diriges a donde quieres copiar el contenido y le das es **Paste** o **ctrl V**
+![](https://raw.githubusercontent.com/sgcm14/LIM015-lab-notes/main/src/assets/images/pantalla14.png)
+>Pantalla de HOME
+
+Te mostrará la nota con el contenido copiado, si deseas guardar le das en **update**.
+![](https://raw.githubusercontent.com/sgcm14/LIM015-lab-notes/main/src/assets/images/pantalla15.png)
+>Pantalla de HOME
+
 
 Si el usuario desea cerrar sesión, solo debe dar click debajo de su foto en **Log out**
 ![](https://raw.githubusercontent.com/sgcm14/LIM015-lab-notes/main/src/assets/images/pantalla9.png)
->Prototipo de pantalla de HOME
+>Pantalla de HOME
 
 ## 5. Consideraciones técnicas
 
