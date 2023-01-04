@@ -1,53 +1,64 @@
 <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
   <a class="navbar-brand" href="#">
-    <img src="../../../assets/images/logo-home.png" width="70"  alt="logo">
+    <img src="../../../assets/images/logo-home.png" width="70" alt="logo">
   </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-4" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-4"
+    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbar-list-4">
-    
+
     <ul class="navbar-nav ml-auto">
-        <li class="nav-item dropdown">
-          
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        {{dataUser.displayName}}
-      <img [src]="dataUser.photoURL" width="50" class="rounded-circle"  alt="">
+      <li class="nav-item dropdown">
+
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          {{dataUser.displayName}}
+          <img [src]="dataUser.photoURL" width="50" class="rounded-circle" alt="">
         </a>
-        <div class="dropdown-menu dropdown-menu-right" style="right: 0; left: auto;" aria-labelledby="navbarDropdownMenuLink">
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" routerLink="/login" (click)="logout()">Log Out</a>
         </div>
-      </li>   
+      </li>
     </ul>
   </div>
 </nav>
 
 
-<section class="container mx-auto row" style="position: relative;">
+<section class="container mx-auto row">
 
-  <button (click)="addNote()" class="btn btn-lg btn-success mt-4">Add Note</button>
+  <button (click)="addNote()" class="add btn btn-lg btn-warning mt-4 mb-4">Add Note</button>
 
-  <div class="card border-warning mb-3 card card text-dark bg-light col-md-4 mt-4 "   *ngFor="let note of myNotes"  style="padding: 0;"><!--style="max-width: 18rem;"-->
-    <div class="card-header bg-transparent border-warning" style="position: relative;">
-      <h4>{{note.titleNote}}</h4> 
-      <button class="btn btn-sm btn-primary" style="position: absolute;right: 33px;top:8px;" (click)="updateNote(note)">Update</button>
-      <button class="btn btn-sm btn-danger" style="position: absolute;right: 5px;top:8px;" (click)="deleteNote(note)">X</button>
+  <div class="card border-warning mb-3 card card text-dark bg-light col-md-4 mt-4 " *ngFor="let note of obs | async">
+    <div class="card-header bg-transparent border-warning">
+      <h4>{{note.titleNote}}</h4>
+      <div class="content-card-header">
+        <button class="btn btn-sm btn-primary" (click)="copyOnClickBoard(note.contentNote)">Copy</button>
+        <button class="btn btn-sm btn-success" (click)="updateNote(note)">Update</button>
+        <button class="btn btn-sm btn-danger" (click)="deleteNote(note)">X</button>
+      </div>
     </div>
-    <div class="card-body" style="padding: 0;">
+    <div class="card-body">
       <p class="card-text">
-        <textarea class="form-control" [(ngModel)]="note.contentNote" rows="4" ></textarea>
-        </p>
+        <textarea class="form-control" [(ngModel)]="note.contentNote" rows="4"></textarea>
+      </p>
     </div>
-    <div class="card-footer bg-transparent border-warning" >
-      <small style="color: gray;">Creado: {{note.date}}</small>
-      
+    <div class="card-footer bg-transparent border-warning">
+      <small>Creado: {{note.date}}</small>
+
     </div>
   </div>
-  
-  
-  
-  <div class="alert alert-info text-center" role="alert" [hidden]="!actualizado" style="position: absolute;right: 45%;top:-45px;width: 200px;">
+
+  <mat-paginator [pageSize]="6" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+
+  <div class="alert alert-primary text-center" role="alert" [hidden]="!copiado">
+    Nota copiada!
+  </div>
+  <div class="alert alert-info text-center" role="alert" [hidden]="!actualizado">
     Nota actualizada!
   </div>
-  
+  <div class="alert alert-danger text-center" role="alert" [hidden]="!eliminado">
+    Nota eliminada!
+  </div>
+
 </section>
