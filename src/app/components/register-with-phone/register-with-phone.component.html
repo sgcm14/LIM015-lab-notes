@@ -1,0 +1,29 @@
+<section>
+  <figure>
+    <img id="login-logoImg" src="../../../assets/images/logo-login.png" alt="logo" />
+  </figure>
+  <main>
+    <form>
+      <h2>Regístrate</h2>
+      <p>Ingresa tus datos</p>
+      <div class="form-group">
+        <input type="text" class="form-control" aria-describedby="basic-addon1" placeholder="Nombres" name="name"
+          [(ngModel)]="user.name">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" aria-describedby="basic-addon1" placeholder="Apellidos" name="lastName"
+          [(ngModel)]="user.lastName">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" aria-describedby="basic-addon1" placeholder="Número de celular"
+          name="phone" [(ngModel)]="user.phone">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Código de validación" name="code" [(ngModel)]="user.code">
+      </div>
+      <button type="button" class="btn btn-dark mt-4" (click)="sendCode()">Enviar código</button>
+      <button type="button" class="btn btn-dark mt-4" (click)="loginWithPhone()">Validar código</button>
+      <div id='sign-in-button'> </div>
+    </form>
+  </main>
+</section>
