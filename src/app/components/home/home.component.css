@@ -1,7 +1,96 @@
-.ml-auto, .mx-auto {
-    margin-left: auto!important;
+.ml-auto,
+.mx-auto {
+  margin-left: auto !important;
 }
 
 .rounded-circle {
-    border-radius: 50%!important;
+  border-radius: 50% !important;
+}
+
+.dropdown-menu .dropdown-menu-right {
+  right: 0;
+  left: auto;
+}
+
+.container {
+  position: relative;
+}
+
+.add {
+  color: #ffffff;
+}
+
+.btn {
+  font-weight: bolder;
+}
+
+.card,
+.card-body {
+  padding: 0;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-card-header {
+  display: flex;
+  justify-content: space-between;
+  width: 148px;
+}
+
+.card-footer {
+  color: gray;
+}
+
+:host ::ng-deep .mat-paginator .mat-paginator-container {
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+:host ::ng-deep .mat-paginator-page-size {
+  display: none;
+}
+
+:host ::ng-deep .mat-paginator-range-actions {
+  border: 1px solid #CDD6E0;
+  border-radius: 16px;
+  align-items: baseline;
+}
+
+:host ::ng-deep .mat-paginator-navigation-previous {
+  order: 1;
+  border-right: 1px solid #CDD6E0;
+  border-radius: 0;
+}
+
+:host ::ng-deep .mat-paginator-range-label {
+  order: 2;
+}
+
+:host ::ng-deep .mat-paginator-navigation-next {
+  order: 3;
+  border-left: 1px solid #CDD6E0;
+  border-radius: 0;
+}
+
+:host ::ng-deep .mat-focus-indicator,
+.mat-tooltip-trigger,
+.mat-paginator-navigation-next,
+.mat-icon-button,
+.mat-button-base {
+  color: #ffc107;
+  background: transparent;
+}
+
+:host ::ng-deep .mat-button-disabled {
+  color: rgba(0, 0, 0, 0.26);
+}
+
+.alert {
+  position: absolute;
+  right: 45%;
+  top: -45px;
+  width: 200px;
 }
