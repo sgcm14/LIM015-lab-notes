@@ -23,6 +23,7 @@ import { AppComponent } from 'src/app/app.component';
 import { LoginComponent } from 'src/app/components/login/login.component';
 import { HomeComponent } from 'src/app/components/home/home.component';
 import { RegisterComponent } from 'src/app/components/register/register.component';
+import { RegisterWithPhoneComponent } from './components/register-with-phone/register-with-phone.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { RegisterComponent } from 'src/app/components/register/register.componen
     AppComponent,
     LoginComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    RegisterWithPhoneComponent
   ],
   imports: [
     BrowserModule,
