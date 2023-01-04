@@ -36,11 +36,28 @@ export class LoginComponent implements OnInit {
   }
 
   loginWithGoogle() {
-    this.authService.loginWithGoogle().then((userCredential: any) => {
-      this.router.navigate(['home']);
-    }).catch((error) => {
-      const errorCode = error.code;
-    });
+    this.authService.loginWithGoogle()
+      .then((userCredential: any) => {
+        const newUser = userCredential.additionalUserInfo.isNewUser;
+        const name = userCredential.additionalUserInfo.profile.name;
+        const photo = userCredential.additionalUserInfo.profile.picture;
+        if (newUser) {
+          console.log('se registro ', userCredential);
+          userCredential.user.updateProfile({
+            displayName: name,
+            photoURL: photo
+          }).then((d: any) => {
+            this.router.navigate(['home']);
+          });
+
+
+        } else {
+          console.log('usuario ya existe');
+          this.router.navigate(['home']);
+        }
+      }).catch((error) => {
+        const errorCode = error.code;
+      });
   }
 
 }
