@@ -36,9 +36,9 @@ export class RegisterComponent implements OnInit {
     } else {
       // Registrar correo para Iniciar Sesión con Correo
       this.authService.registerWithEmail(email, password).then((userCredential: any) => {
-        console.log('se registro ', userCredential);
         const newUser = userCredential.additionalUserInfo.isNewUser;
         if (newUser) {
+          console.log('se registro ', userCredential);
           userCredential.user.updateProfile({
             displayName: name + ' ' + lastName,
             photoURL: "https://firebasestorage.googleapis.com/v0/b/lab-notes-fdc81.appspot.com/o/profile.png?alt=media&token=0775603e-664c-4e7c-b338-b3f4b8f06633"
