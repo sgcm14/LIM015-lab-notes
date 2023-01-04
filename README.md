@@ -178,9 +178,17 @@ Al dar click en Crear cuenta, te redirige a una ventana con datos que debes llen
 ![](https://raw.githubusercontent.com/sgcm14/LIM015-lab-notes/main/src/assets/images/pantalla2.png)
 >Pantalla de REGISTRAR
 
-Ingreso a la web: El usuario puede ingresar con Google al darle click en **Acceder con Google**
+Ingreso a la web: El usuario puede ingresar con Google al darle click en **Iniciar sesión con Google**
 
 ![](https://raw.githubusercontent.com/sgcm14/LIM015-lab-notes/main/src/assets/images/pantalla3.png)
+>Pantalla de LOGIN
+
+Ingreso a la web: El usuario puede ingresar con su número de celular al darle click en **Iniciar sesión con SMS**
+![](https://raw.githubusercontent.com/sgcm14/LIM015-lab-notes/main/src/assets/images/pantalla16.png)
+>Pantalla de LOGIN
+
+Al dar click en **Iniciar sesión con SMS**, te redirige a una ventana con datos que debes llenar correctamente **(Nombres, Apellidos y número de celular)** *ejemplo de celular: +51999999999* y dar click en **Enviar código**, recibirás un SMS con el código de validación en el celular, deberás digitarlo en el campo correspondiente y luego dar click en **Validar Código**, te redirigirá a la vista de las notas.
+![](https://raw.githubusercontent.com/sgcm14/LIM015-lab-notes/main/src/assets/images/pantalla17.png)
 >Pantalla de LOGIN
 
 El usuario cuando le da click en **Add Note**
